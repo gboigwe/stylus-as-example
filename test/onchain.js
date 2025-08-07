@@ -6,7 +6,7 @@
 import { ethers } from 'ethers';
 
 // Constants
-const CONTRACT_ADDRESS = '0xf5ffd11a55afd39377411ab9856474d2a7cb697e';
+const CONTRACT_ADDRESS = '0x85d9a8a4bd77b9b5559c1b7fcb8ec9635922ed49';
 const RPC_URL = 'http://localhost:8547/';
 
 // Initial setup

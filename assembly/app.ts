@@ -84,8 +84,36 @@ function getMaxPrimeUpTo(number: i32): i32 {
  * @param input bytes in Uint8Array
  * @returns bytes in Uint8Array
  */
+// export const main = (input: Uint8Array): Uint8Array => {
+//   const maxNumber = bytesToI32(input);
+//   const maxPrime = getMaxPrimeUpTo(maxNumber);
+//   return i32ToBytes(maxPrime);
+// };
+
+/**
+ * Returns the minimum even prime number
+ * Since 2 is the only even prime number, this function always returns 2
+ */
+function getMinEvenPrime(number: i32): i32 {
+  // The only even prime number is 2
+  // If the input is less than 2, return 0 as error (following original pattern)
+  if (number < 2) {
+    return 0;
+  }
+  
+  // For any input >= 2, the minimum even prime is always 2
+  return 2;
+}
+
+/**
+ * Main function of your contract
+ * @dev Receives the input of bytes in Uint8Array. Result must also be sent in bytes wrapped in Uint8Array
+ *
+ * @param input bytes in Uint8Array
+ * @returns bytes in Uint8Array
+ */
 export const main = (input: Uint8Array): Uint8Array => {
-  const maxNumber = bytesToI32(input);
-  const maxPrime = getMaxPrimeUpTo(maxNumber);
-  return i32ToBytes(maxPrime);
+  const inputNumber = bytesToI32(input);
+  const minEvenPrime = getMinEvenPrime(inputNumber);
+  return i32ToBytes(minEvenPrime);
 };
